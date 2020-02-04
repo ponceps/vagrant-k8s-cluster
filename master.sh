@@ -16,5 +16,5 @@ su - vagrant -c "kubectl apply -f \"https://cloud.weave.works/k8s/net?k8s-versio
 apt-get update
 apt-get install -y bash-completion
 echo 'source <(kubectl completion bash)' >> ~vagrant/.bashrc
-echo 'alias k=kubectl' >>i ~vagrant /.bashrc
+echo 'alias k=kubectl' >> ~vagrant/.bashrc
 echo 'complete -F __start_kubectl k' >> ~vagrant/.bashrc
