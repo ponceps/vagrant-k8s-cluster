@@ -14,5 +14,6 @@ systemctl start docker
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add
 apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 apt-get update
+echo "KUBELET_EXTRA_ARGS=--node-ip=$(hostname -I | awk '{print $2}')" >> /etc/default/kubelet
 apt-get install -y kubeadm kubelet kubectl
 
